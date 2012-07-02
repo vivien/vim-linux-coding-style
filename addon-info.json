@@ -1,9 +1,0 @@
-{
-	"name": "linux-coding-style",
-	"version": "0.0",
-	"author": "Vivien Didelot <vivien@didelot.org>",
-	"maintainer": "Vivien Didelot <vivien@didelot.org>",
-	"repository": {"type": "git", "url": "git://github.com/v0n/vim-addon-linux-coding-style.git"},
-	"dependencies": {},
-	"description": "Vim settings to respect the Linux kernel coding style"
-}
