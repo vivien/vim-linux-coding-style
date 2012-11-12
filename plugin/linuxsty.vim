@@ -41,7 +41,7 @@ endfunction
 function s:LinuxHighlighting()
 	highlight default link LinuxError ErrorMsg
 
-    match			LinuxError	" \+\t"		" spaces before tab
-    match			LinuxError	"\s\+$"		" trailing whitespaces
+	match			LinuxError	" \+\t"		" spaces before tab
+	match			LinuxError	"\s\+$"		" trailing whitespaces
 	syntax match	LinuxError	/.\%>81v/	" virtual column 81 and more
 endfunction
