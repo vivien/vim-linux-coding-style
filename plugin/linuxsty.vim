@@ -43,5 +43,5 @@ function s:LinuxHighlighting()
 
 	match			LinuxError	" \+\t"		" spaces before tab
 	match			LinuxError	"\s\+$"		" trailing whitespaces
-	"syntax match	LinuxError	/.\%>81v/	" virtual column 81 and more FIXME
+	match			LinuxError	/\%81v.\+/	" virtual column 81 and more
 endfunction
