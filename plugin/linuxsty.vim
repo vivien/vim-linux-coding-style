@@ -1,10 +1,11 @@
 " Vim plugin to fit the Linux kernel coding style and help kernel development
-" Last Change:	2012 Jul 1
-" Maintainer:	Vivien Didelot <vivien@didelot.org>
-" License:		This file is distributed under the Beerware license.
+" Last Change:	2012 Dec 24
+" Maintainer:	Vivien Didelot <vivien.didelot@savoirfairelinux.com>
+" License:		Distributed under the same terms as Vim itself.
 "
 " This script is inspired from an article written by Bart:
 " http://www.jukie.net/bart/blog/vim-and-linux-coding-style
+" and various user comments.
 
 if exists("g:loaded_linuxsty")
 	finish
