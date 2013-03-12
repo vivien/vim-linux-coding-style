@@ -1,5 +1,5 @@
 " Vim plugin to fit the Linux kernel coding style and help kernel development
-" Last Change:  2012 Dec 24
+" Last Change:  2013 Mars 12
 " Maintainer:   Vivien Didelot <vivien.didelot@savoirfairelinux.com>
 " License:      Distributed under the same terms as Vim itself.
 "
