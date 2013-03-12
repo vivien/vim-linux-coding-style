@@ -42,9 +42,9 @@ endfunction
 function s:LinuxHighlighting()
     highlight default link LinuxError ErrorMsg
 
-    match LinuxError " \+\t"        " spaces before tab
-    match LinuxError "\s\+$"        " trailing whitespaces
-    match LinuxError /\%81v.\+/     " virtual column 81 and more
+    syn match LinuxError / \+\ze\t/     " spaces before tab
+    syn match LinuxError /\s\+$/        " trailing whitespaces
+    syn match LinuxError /\%81v.\+/     " virtual column 81 and more
 endfunction
 
 " vim: ts=4 et sw=4
