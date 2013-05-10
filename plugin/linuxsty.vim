@@ -21,6 +21,8 @@ function! SetLinuxFormatting()
     autocmd FileType diff,kconfig
 endfunc
 
+command! SetLinuxFormatting call SetLinuxFormatting()
+
 function s:LinuxSettings()
     setlocal tabstop=8
     setlocal shiftwidth=8
