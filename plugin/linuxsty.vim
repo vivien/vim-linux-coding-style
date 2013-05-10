@@ -3,4 +3,4 @@
 " Author:       Ben Hilburn <bhilburn@gmail.com>
 " License:      Distributed under the same terms as Vim itself.
 
-command! LinuxFormatting cal SetLinuxFormatting()
+command! LinuxFormatting call SetLinuxFormatting()
