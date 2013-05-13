@@ -1,5 +1,5 @@
 " Vim plugin to fit the Linux kernel coding style and help kernel development
-" Last Change:  2013 Mars 12
+" Last Change:  2013 May 10
 " Maintainer:   Vivien Didelot <vivien.didelot@savoirfairelinux.com>
 " License:      Distributed under the same terms as Vim itself.
 "
@@ -8,22 +8,24 @@
 " and various user comments.
 
 if exists("g:loaded_linuxsty")
-    finish
+    finish
 endif
 let g:loaded_linuxsty = 1
 
-set wildignore+=*.ko,*.mod.c,*.order,modules.builtin
-
-augroup linuxsty
+function! SetLinuxFormatting()
     autocmd!
 
-    autocmd FileType c,cpp call s:LinuxFormatting()
+    autocmd FileType c,cpp call s:LinuxSettings()
     autocmd FileType c,cpp call s:LinuxKeywords()
     autocmd FileType c,cpp call s:LinuxHighlighting()
-    autocmd FileType diff,kconfig setlocal tabstop=8
-augroup END
+    autocmd FileType diff,kconfig
 
-function s:LinuxFormatting()
+    filetype detect
+endfunc
+
+command! SetLinuxFormatting call SetLinuxFormatting()
+
+function s:LinuxSettings()
     setlocal tabstop=8
     setlocal shiftwidth=8
     setlocal textwidth=80
@@ -32,6 +34,8 @@ function s:LinuxFormatting()
     setlocal cindent
     setlocal formatoptions=tcqlron
     setlocal cinoptions=:0,l1,t0,g0
+
+    setlocal wildignore+=*.ko,*.mod.c,*.order,modules.builtin
 endfunction
 
 function s:LinuxKeywords()
