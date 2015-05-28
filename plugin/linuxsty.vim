@@ -41,7 +41,11 @@ function s:LinuxKeywords()
 endfunction
 
 function s:LinuxHighlighting()
-    highlight default link LinuxError ErrorMsg
+    " We use an autocommand here to make sure that this styling gets applied
+    " whenever the colorscheme changes. Without this, certain colorschemes
+    " (such as Solarized) may override these settings when applied
+    autocmd ColorScheme * highlight LinuxError ctermbg=red guibg=red ctermfg=darkred guifg=darkred
+    doautocmd ColorScheme
 
     syn match LinuxError / \+\ze\t/     " spaces before tab
     syn match LinuxError /\%81v.\+/     " virtual column 81 and more
