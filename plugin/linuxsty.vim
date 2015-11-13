@@ -43,10 +43,14 @@ function s:LinuxConfigure()
     endif
 
     if apply_style
-        call s:LinuxFormatting()
-        call s:LinuxKeywords()
-        call s:LinuxHighlighting()
+        call s:LinuxCodingStyle()
     endif
+endfunction
+
+function! s:LinuxCodingStyle()
+    call s:LinuxFormatting()
+    call s:LinuxKeywords()
+    call s:LinuxHighlighting()
 endfunction
 
 function s:LinuxFormatting()
