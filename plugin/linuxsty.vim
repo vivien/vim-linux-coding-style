@@ -47,6 +47,8 @@ function s:LinuxConfigure()
     endif
 endfunction
 
+command! LinuxCodingStyle call s:LinuxCodingStyle()
+
 function! s:LinuxCodingStyle()
     call s:LinuxFormatting()
     call s:LinuxKeywords()
