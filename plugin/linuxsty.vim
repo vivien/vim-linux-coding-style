@@ -26,6 +26,7 @@ augroup linuxsty
     autocmd FileType c,cpp call s:LinuxConfigure()
     autocmd FileType diff setlocal ts=8
     autocmd FileType kconfig setlocal ts=8 sw=8 sts=8 noet
+    autocmd FileType dts setlocal ts=8 sw=8 sts=8 noet
 augroup END
 
 function s:LinuxConfigure()
