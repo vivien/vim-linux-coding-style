@@ -28,21 +28,21 @@ augroup linuxsty
 augroup END
 
 function s:LinuxConfigure()
-    let apply_style = 0
+    let b:apply_linux_style = 0
 
     if exists("g:linuxsty_patterns")
         let path = expand('%:p')
         for p in g:linuxsty_patterns
             if path =~ p
-                let apply_style = 1
+                let b:apply_linux_style = 1
                 break
             endif
         endfor
     else
-        let apply_style = 1
+        let b:apply_linux_style = 1
     endif
 
-    if apply_style
+    if b:apply_linux_style
         call s:LinuxCodingStyle()
     endif
 endfunction
