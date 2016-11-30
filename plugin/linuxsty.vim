@@ -53,6 +53,7 @@ function! s:LinuxCodingStyle()
     call s:LinuxFormatting()
     call s:LinuxKeywords()
     call s:LinuxHighlighting()
+    let  b:linuxsty_applied = 1
 endfunction
 
 function s:LinuxFormatting()
