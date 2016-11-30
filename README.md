@@ -38,6 +38,26 @@ the following in your vimrc:
 
     nnoremap <silent> <leader>a :LinuxCodingStyle<cr>
 
+In oder to detect, if the coding style is applied or not there exists two
+parameters per buffer. The `b:apply_linux_style` is set to 1 if the
+style should be applied (e.g. the `g:linuxsty_patterns` matches).
+
+The `b:linuxsty_applied` is on the other hand set to 1 if the `:LinuxCodingStyle`
+is called and finished for the current buffer. This includes also calls by other
+plugins or even manual calls.
+An example how this could be useful is to set the |listchars| depending on the
+`b:linuxsty_applied` state.
+
+    function! LoadCustomStyle()
+        if (exists("b:linuxsty_applied")) && b:linuxsty_applied == 1
+            set listchars=tab:\ \ ,nbsp:_,trail:.
+        else
+            set listchars=tab:>~,nbsp:_,trail:.
+        endif
+    endfun
+    autocmd BufEnter * :call LoadCustomStyle()
+
+
 ## License
 
 Copyright (c) Vivien Didelot. Distributed under the same terms as Vim itself. 
