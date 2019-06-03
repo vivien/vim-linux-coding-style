@@ -1,7 +1,7 @@
 # linuxsty.vim
 
 This plugin is meant to help you respecting the Linux kernel coding style,
-described at: http://www.kernel.org/doc/Documentation/CodingStyle
+described at: https://www.kernel.org/doc/Documentation/process/coding-style.rst
 
 It will automatically apply known rules to kernel related files, such as .c,
 .h, Kconfig and patch files. The main rules are about indentation and syntax
