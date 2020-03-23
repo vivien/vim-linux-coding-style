@@ -66,6 +66,7 @@ function s:LinuxFormatting()
 
     setlocal cindent
     setlocal cinoptions=:0,l1,t0,g0,(0
+    setlocal nolist
 endfunction
 
 function s:LinuxKeywords()
