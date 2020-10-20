@@ -12,6 +12,12 @@
 " options will be applied only if "/linux/" or "/kernel" is in buffer's path.
 "
 "   let g:linuxsty_patterns = [ "/linux/", "/kernel/" ]
+"
+" Exclusion patterns can be also be applied. The following example would
+" exclude anything that had "/foo/" in the path, even if it would match
+" something in linuxsty_patterns
+"
+"   let g:linuxsty_exclude_patterns = [ "/foo/" ]
 
 if exists("g:loaded_linuxsty")
     finish
@@ -43,6 +49,16 @@ function s:LinuxConfigure()
         endfor
     else
         let apply_style = 1
+    endif
+
+    if exists("g:linuxsty_exclude_patterns")
+        let path = expand('%:p')
+        for p in g:linuxsty_exclude_patterns
+            if path =~ p
+                let apply_style = 0
+                break
+            endif
+        endfor
     endif
 
     if apply_style

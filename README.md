@@ -32,6 +32,12 @@ only projects under /usr/src/ and /linux with the following:
 
     let g:linuxsty_patterns = [ "/usr/src/", "/linux" ]
 
+Exclusion patterns can be also be applied. The following example would
+exclude anything that had "/foo/" in the path, even if it would match
+something in linuxsty_patterns
+
+    let g:linuxsty_exclude_patterns = [ "/foo/" ]
+
 If you want to enable the coding style on demand without checking the filetype, 
 you can use the :LinuxCodingStyle command. For instance, you can map it with 
 the following in your vimrc:
