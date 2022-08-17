@@ -28,6 +28,7 @@ augroup linuxsty
     autocmd FileType rst setlocal ts=8 sw=8 sts=8 noet
     autocmd FileType kconfig setlocal ts=8 sw=8 sts=8 noet
     autocmd FileType dts setlocal ts=8 sw=8 sts=8 noet
+    autocmd FileType make setlocal ts=8 sw=8 sts=8 noet
 augroup END
 
 function s:LinuxConfigure()
