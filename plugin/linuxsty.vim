@@ -28,6 +28,7 @@ augroup linuxsty
     autocmd FileType rst setlocal ts=8 sw=8 sts=8 noet
     autocmd FileType kconfig setlocal ts=8 sw=8 sts=8 noet
     autocmd FileType dts setlocal ts=8 sw=8 sts=8 noet
+    autocmd FileType make setlocal ts=8 sw=8 sts=8 noet
 augroup END
 
 function s:LinuxConfigure()
@@ -62,7 +63,7 @@ function s:LinuxFormatting()
     setlocal tabstop=8
     setlocal shiftwidth=8
     setlocal softtabstop=8
-    setlocal textwidth=80
+    setlocal textwidth=100
     setlocal noexpandtab
 
     setlocal cindent
@@ -80,7 +81,7 @@ function s:LinuxHighlighting()
     highlight default link LinuxError ErrorMsg
 
     syn match LinuxError / \+\ze\t/     " spaces before tab
-    syn match LinuxError /\%>80v[^()\{\}\[\]<>]\+/ " virtual column 81 and more
+    syn match LinuxError /\%>100v[^()\{\}\[\]<>]\+/ " virtual column 101 and more
 
     " Highlight trailing whitespace, unless we're in insert mode and the
     " cursor's placed right after the whitespace. This prevents us from having
